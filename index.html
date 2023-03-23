@@ -13,28 +13,39 @@
 
 
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/Login/styleLogin.css">
+    <link rel="stylesheet" href="./assets/css/Login/reponsiveLogin.css">
+
 
 </head>
 <body>
     <div class="container" id="container">
         <div class="form-container register-container">
-            <form action="#" method="POST" id="form-1">
+            <form action="#" method="POST" id="form-register">
                 <h1>Register here.</h1>
                 <div class="form-group">
-                    <input type="text" name="fullname" class="form-input fullname" required="required">
+                    <input type="text" name="fullname" class="form-input fullname" >
                     <label for="fullname" class="form-label">Name</label>
                     <span class="form-message"></span>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="email" class="form-input email" required="required">
+                    <input type="email" name="email" class="form-input email" >
                     <label for="email" class="form-label">Email</label>
                     <span class="form-message"></span>
 
                 </div>
-                <div class="form-group">
-                    <input type="text" name="password" class="form-input password" required="required">
+                <div class="form-group group-password">
+                    <input type="password" name="password" class="form-input password" >
                     <label for="password" class="form-label">Password</label>
+                    <i class="fa-regular fa-eye show-password active"></i>
+                    <i class="fa-regular fa-eye-slash hide-password"></i>
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group group-password">
+                    <input type="password" name="password_confirmation" class="form-input password_confirmation" >
+                    <label for="password_confirmation" class="form-label">Password Confirmation</label>
+                    <i class="fa-regular fa-eye show-password active"></i>
+                    <i class="fa-regular fa-eye-slash hide-password"></i>
                     <span class="form-message"></span>
                 </div>
                 <button>Register</button>
@@ -44,19 +55,27 @@
                     <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
                     <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
+                <div class="link-container">
+                    <span>Already have an account?</span>
+                    <a href="" class="register-link">
+                        Login
+                    </a>
+                </div>
             </form>
         </div>
         <div class="form-container login-container">
-            <form action="#" method="POST" id="form-2">
+            <form action="#" method="POST" id="form-login">
                 <h1>Login here.</h1>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-input" required="required">
+                    <input type="text" name="email" class="form-input email">
                     <label for="email" class="form-label">Email</label>
                     <span class="form-message"></span>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" class="form-input" required="required">
+                    <input type="password" name="password" class="form-input password">
                     <label for="password" class="form-label">Password</label>
+                    <i class="fa-regular fa-eye show-password active"></i>
+                    <i class="fa-regular fa-eye-slash hide-password"></i>
                     <span class="form-message"></span>
                 </div>
                 <div class="content">
@@ -74,6 +93,12 @@
                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
                     <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="link-container">
+                    <span>Don't have an account?</span>
+                    <a href="#" class="login-link">
+                        Register
+                    </a>
                 </div>
             </form>
         </div>
@@ -99,17 +124,41 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="./assets/js/script.js"></script>
-    <script type="text/javascript" src="./assets/js/validator.js"></script>
+    <script type="text/javascript" src="./assets/js/Login/scriptLogin.js"></script>
+    <script type="text/javascript" src="./assets/js/Login/validator.js"></script>
     <script type="text/javascript">
         Validator({
-            form: '#form-1',
+            form: '#form-register',
+            formGroupSelector: '.form-group',
             errorSelector: '.form-message',
             rules: [
-                Validator.isRequired('.fullname'),
+                Validator.isRequired('.fullname', 'Vui lòng nhập tên đầy đủ!'),
+                Validator.isRequired('.email'),
                 Validator.isEmail('.email'),
-                Validator.minLength('.password', 6)
-            ]
+                Validator.isRequired('.password'),
+                Validator.minLength('.password', 6),
+                Validator.isRequired('.password_confirmation'),
+                Validator.isConfirmed('.password_confirmation', function() {
+                    return document.querySelector('#form-register .password').value;
+                }, 'Mật khẩu nhập lại không chính xác!')
+            
+            ],
+            onSubmit: function (data) {
+                console.log(data);
+            }
+        });
+        Validator({
+            form: '#form-login',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('.email'),
+                Validator.isEmail('.email'),
+                Validator.isRequired('.password'),
+            ],
+            onSubmit: function (data) {
+                console.log(data);
+            }
         });
     </script>
 </body>
