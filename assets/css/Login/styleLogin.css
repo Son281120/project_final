@@ -170,6 +170,7 @@ input {
 
 .link-container {
     margin-bottom: 2rem;
+    display: none;
 }
 
 .container {
