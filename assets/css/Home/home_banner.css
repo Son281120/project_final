@@ -1,0 +1,17 @@
+.banner {
+    width: 100vw;
+}
+
+.banner__img {
+    width: 50%;
+}
+
+.banner__img img {
+    width: 100%;
+}
+
+.banner__img:hover img {
+    transform: scale(0.8);
+    transition: all 0.3s ease-in;
+}
+

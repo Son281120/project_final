@@ -1,8 +1,11 @@
 
 .header {
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--white-color);
+    z-index: 1;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 /* Header-top */
 .header__top {
@@ -223,6 +226,9 @@ header .header__top .panel_cart {
     transition: all 0.4s ease-in-out;
 }
 
+.slide {
+    margin-top: 130px;
+}
 
 
 
