@@ -1,0 +1,91 @@
+.category {
+    border-radius: 25px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 30px 0;
+}
+
+.category__title {
+    text-align: center;
+}
+
+.category__title-label {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+.label-link {
+    color: var(--text-color);
+}
+
+.category__title-label:hover a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.category__title-desc {
+    font-size: 1.4rem;
+}
+
+.category__item {
+    position: relative;
+}
+
+.category__item:hover .category__img {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+.category__img {
+    display: block;
+    max-width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    border: 1px solid #EBEBEB;
+    border-radius: 25px;
+}
+.category__info {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 14px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.category__info-name {
+    text-transform: uppercase;
+    color: #3F82BB;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    
+}
+
+
+.category__item:hover .category__info {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.6s ease-in;
+}
+
+.category__item:hover .category__info-name {
+    color: var(--white-color);
+    text-shadow: 2px 2px 1px #3F82BB;
+    transition: all 0.6s ease-in;
+
+}
+
+.category__item:hover .category__info-quantity {
+    display: block;
+    transition: all 0.6s ease-in;
+
+}
+
+.category__info-quantity {
+    display: none;
+    color: var(--white-color);
+}

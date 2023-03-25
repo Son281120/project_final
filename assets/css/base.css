@@ -5,7 +5,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-shadow-color: #10404a80;
-    --text-color: #333;
+    --text-color: #5b5b5b;
     --input-color: #E8F0FE;
     --primary-color: #4bb6b7
 }
@@ -22,9 +22,11 @@ html{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+body {
+    width: 100%;
+}
 
-
-button {
+.btn {
     position: relative;
     border-radius: 20px;
     border: 1px solid var(--primary-color);
@@ -39,15 +41,15 @@ button {
     transition: 0.3s ease-in-out;
 }
 
-button:hover {
+.btn:hover {
     letter-spacing: 3px;
 }
 
-button:active {
+.btn:active {
     transform: scale(0.95);
 }
 
-button:focus {
+.btn:focus {
     outline: none;
 }
 
@@ -76,3 +78,6 @@ button:focus {
     border-radius: 4px;
 }
 
+.container-fluid {
+    padding: 0 !important;
+}

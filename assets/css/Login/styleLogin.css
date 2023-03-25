@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     height: 100vh;
-    background-image: url(../../../assets/img/peace.gif);
+    background-image: url(../../../assets/img/gif/peace.gif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -78,32 +78,32 @@ a:hover {
 }
 
 
-button.ghost {
+.btn.ghost {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid var(--white-color);
     color: var(--white-color);
 }
 
-button.ghost i {
+.btn.ghost i {
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
 
-button.ghost i.register {
+.btn.ghost i.register {
     right: 7rem;
 }
 
-button.ghost i.login {
+.btn.ghost i.login {
     left: 7rem;
 }
 
-button.ghost:hover i.register {
+.btn.ghost:hover i.register {
     right: 4rem;
     opacity: 1;
 }
 
-button.ghost:hover i.login {
+.btn.ghost:hover i.login {
     left: 4rem;
     opacity: 1;
 
@@ -245,7 +245,7 @@ input {
 }
 
 .overlay {
-    background-image: url(../../../assets/img/peace.gif);
+    background-image: url(../../../assets/img/gif/peace.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
