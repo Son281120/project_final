@@ -126,6 +126,7 @@
 
     <script type="text/javascript" src="./assets/js/Login/scriptLogin.js"></script>
     <script type="text/javascript" src="./assets/js/Login/validator.js"></script>
+    <script type="text/javascript" src="./assets/js/Login/localStorageAccount.js"></script>
     <script type="text/javascript">
         Validator({
             form: '#form-register',
@@ -143,8 +144,23 @@
                 }, 'Mật khẩu nhập lại không chính xác!')
             
             ],
-            onSubmit: function (data) {
-                console.log(data);
+            onSubmit: function (account) {
+                // Call API
+                console.log(account);
+                // Save data on local storage
+                const accountsLocalStorage = JSON.parse(localStorage.getItem("accounts")) || [];
+                const foundAccount = accountsLocalStorage.find((item) => item.email === account.email);
+                if (foundAccount) {
+                    alert("Email already exists!");
+                }else {
+                    accountsLocalStorage.push(account);
+                    alert("Register successful!")
+                    // Reset values
+
+                    const valuesInput = document.querySelectorAll('.register-container input');
+                    valuesInput.forEach(input => input.value = '');
+                }
+                localStorage.setItem("accounts", JSON.stringify(accountsLocalStorage));
             }
         });
         Validator({
@@ -156,8 +172,27 @@
                 Validator.isEmail('.email'),
                 Validator.isRequired('.password'),
             ],
-            onSubmit: function (data) {
-                console.log(data);
+            onSubmit: function (account) {
+                // Call API
+                console.log(account);
+
+                // Check account login
+                const accountsLocalStorage = JSON.parse(localStorage.getItem("accounts")) || [];
+                const saveAccountLocalStorage = JSON.parse(localStorage.getItem("saveAccount")) || [];
+                const checkSaveAccount =  document.getElementById("checkbox");
+
+
+                const checkLogin = accountsLocalStorage.find((item) => (item.email === account.email && item.password === account.password));
+                if(checkLogin) {
+                    alert("Login successful");
+                    if(checkSaveAccount.checked) {
+                        saveAccountLocalStorage.push(account);
+                        localStorage.setItem("saveAccount", JSON.stringify(accountsLocalStorage));
+                    }
+                    window.location.href = './home.html';
+                }else {
+                    alert("Login failed");
+                }
             }
         });
     </script>
