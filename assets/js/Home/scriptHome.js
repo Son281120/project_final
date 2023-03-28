@@ -2,19 +2,13 @@ import products from "./../../data/productData.js";
 import categories from "./../../data/categoryData.js";
 import brands from "./../../data/brandData.js";
 
-// Render the product
 
 const listProduct = document.querySelector('.product__list');
 
-function findbyID(array, id) {
-    const resultName = (array.find((item) => item.id === id)).name;
-    return resultName;
-}
-
-const categoryName = findbyID(categories, 1);
-const brandName = findbyID(brands, 3);
 
 
+
+// Render the product
 
 const productItems = products.map((product) => {
     return ` <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 product__item">
@@ -39,6 +33,7 @@ const productItems = products.map((product) => {
                     </button>
                 </div>
                 <button class="add-cart-btn">Thêm vào giỏ hàng</button>
+                
             </div>
     `;
 });
@@ -61,5 +56,36 @@ const brandItems = brands.map((brand) => {
     `;
 });
 
-listCategory.innerHTML = categoryItems.join('');
+listCategory.innerHTML = brandItems.join('');
 
+// lưu sản phẩm vào cart localStorage
+
+const saveProductLocalStorage = JSON.parse(localStorage.getItem("saveProduct")) || [];
+
+const listItems  = Array.from(document.querySelectorAll('.add-cart-btn'));
+
+listItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const clickElement = e.target;
+        const productID = clickElement.parentElement.querySelector('.product__id').innerText;
+        const productResult = products.find(p => p.id === productID);
+        saveProductLocalStorage.push(productResult);
+        localStorage.setItem("saveProduct", JSON.stringify(saveProductLocalStorage));
+    });
+});
+
+
+// lưu sản phẩm vào detail
+const detailProductLocalStorage = JSON.parse(localStorage.getItem("detailProduct")) || [];
+const listLinks  = Array.from(document.querySelectorAll('.product__name a'));
+
+listLinks.forEach(item => {
+    item.addEventListener('click', (e) => {
+        const clickElement = e.target;
+        const productID = clickElement.parentElement.parentElement.querySelector('.product__id').innerText;
+        const productResult = products.find(p => p.id === productID);
+        detailProductLocalStorage.push(productResult);
+        localStorage.setItem("detailProduct", JSON.stringify(detailProductLocalStorage));
+    });
+});

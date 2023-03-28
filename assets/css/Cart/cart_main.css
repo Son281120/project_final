@@ -1,0 +1,119 @@
+
+.cart {
+    margin-top: 180px;
+    border-top: 2px dotted #ebebeb;
+}
+
+.cart form {
+    margin-top: 50px;
+}
+
+.cart__thead div {
+    background-color: #fbfbfb;
+    padding: 12px;
+    border: 1px solid #ebebeb;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.cart__tbody div  {
+    font-size: 1.4rem;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart__size {
+    display: block;
+}
+
+.form-group {
+    border: none;
+}
+
+.cart__thead, .cart__tbody {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.cart__product_img {
+    width: max-content;
+}
+
+
+.cart__product_img img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.a-center {
+    text-align: center;
+}
+
+
+.group__quntity {
+    border: none !important;
+}
+
+.add-product-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none !important;
+}
+
+.add-product-quantity button {
+    display: inline-block;
+    border-radius: 50%;
+    border: none;
+    background-color: #ededed;
+}
+
+.add-product-quantity button:focus {
+    outline: none;
+}
+
+.add-product-quantity button:hover {
+    color: var(--white-color);
+    background-color: var(--hover-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.add-product-quantity button span {
+    display: inline-block;
+}
+
+.subtraction__btn {
+    padding: 8px 13px;
+}
+
+.addition__btn {
+    padding: 8px 12px;
+}
+
+.input-quantity {
+    width: 30px;
+    display: inline-block;
+    transform: translateY(25%);
+    border: none;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+
+.input-quantity:focus {
+    outline: none;
+}
+
+.addToCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

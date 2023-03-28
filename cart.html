@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
 
-    
+
     <link rel="icon" href="./assets/img/penguinFavicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1/css/all.min.css">
@@ -17,7 +18,10 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/Home/home_header.css">
     <link rel="stylesheet" href="./assets/css/Home/home_footer.css">
+    <link rel="stylesheet" href="./assets/css/Cart/cart_main.css">
+
 </head>
+
 <body>
     <header class="header">
         <div class="header__top">
@@ -186,7 +190,96 @@
             </div>
         </div>
     </header>
-    
+
+    <div class="container cart">
+        <form action="#">
+            <div class="cart__thead">
+                <div style="width: 17%" class="a-center">Ảnh sản phẩm</div>
+                <div style="width: 28%" class="a-center">Thông tin</div>
+                <div style="width: 16%" class="a-center"><span class="nobr">Đơn giá</span></div>
+                <div style="width: 14%" class="a-center">Số lượng</div>
+                <div style="width: 20%" class="a-center">Thành tiền</div>
+                <div style="width: 5%" class="a-center">Xóa</div>
+            </div>
+            <div class="cart__tbody">
+                <div style="width: 17%" class=" cart__product_img">
+                    <img src="./assets/img/product/product_3-1.webp" alt="">
+                </div>
+                <div style="width: 28%" class="a-center">
+                    <label>Jordan 1 High Zoom Air CMFT Canyon Rust (CT0979-602)</label> 
+                    <span class="cart__size">38.5</span>
+                </div>
+                <div style="width: 16%" class="a-center"><span class="nobr">Đơn giá</span></div>
+                <div style="width: 14%" class="a-center">
+                    <div class="add-product-quantity product__form_label">
+                        <button class="subtraction__btn"><span>-</span></button>
+                        <form action="" class="form-quantity">
+                            <div class="form-group ">
+                                <input type="text" value="1" class="form-input input-quantity">
+                            </div>
+                        </form>
+                        <button class="addition__btn"><span>+</span></button>
+                    </div>
+                </div>
+                <div style="width: 20%" class="a-center">Thành tiền</div>
+                <div style="width: 5%" class="a-center">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            <div class="cart__tbody">
+                <div style="width: 17%" class=" cart__product_img">
+                    <img src="./assets/img/product/product_3-1.webp" alt="">
+                </div>
+                <div style="width: 28%" class="a-center">
+                    <label>Jordan 1 High Zoom Air CMFT Canyon Rust (CT0979-602)</label> 
+                    <span class="cart__size">38.5</span>
+                </div>
+                <div style="width: 16%" class="a-center"><span class="nobr">Đơn giá</span></div>
+                <div style="width: 14%" class="a-center">
+                    <div class="add-product-quantity product__form_label">
+                        <button class="subtraction__btn"><span>-</span></button>
+                        <form action="" class="form-quantity">
+                            <div class="form-group ">
+                                <input type="text" value="1" class="form-input input-quantity">
+                            </div>
+                        </form>
+                        <button class="addition__btn"><span>+</span></button>
+                    </div>
+                </div>
+                <div style="width: 20%" class="a-center">Thành tiền</div>
+                <div style="width: 5%" class="a-center">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            <div class="cart__tbody">
+                <div style="width: 17%" class=" cart__product_img">
+                    <img src="./assets/img/product/product_3-1.webp" alt="">
+                </div>
+                <div style="width: 28%" class="a-center">
+                    <label>Jordan 1 High Zoom Air CMFT Canyon Rust (CT0979-602)</label> 
+                    <span class="cart__size">38.5</span>
+                </div>
+                <div style="width: 16%" class="a-center"><span class="nobr">Đơn giá</span></div>
+                <div style="width: 14%" class="a-center">
+                    <div class="add-product-quantity product__form_label">
+                        <button class="subtraction__btn"><span>-</span></button>
+                        <form action="" class="form-quantity">
+                            <div class="form-group ">
+                                <input type="text" value="1" class="form-input input-quantity">
+                            </div>
+                        </form>
+                        <button class="addition__btn"><span>+</span></button>
+                    </div>
+                </div>
+                <div style="width: 20%" class="a-center">Thành tiền</div>
+                <div style="width: 5%" class="a-center">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
     <footer class="footer">
@@ -328,5 +421,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
+
 </html>
