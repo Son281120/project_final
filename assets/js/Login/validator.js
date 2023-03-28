@@ -130,7 +130,6 @@ Validator.minLength = function (selector, min, message) {
     }
 }
 
-
 Validator.isConfirmed = function (selector, getConfirmValue, message) {
     return {
         selector: selector,

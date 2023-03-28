@@ -3,7 +3,7 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     padding: 30px 0;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .product__item {
@@ -12,6 +12,7 @@
 
 .product__title {
     text-align: center;
+    padding-bottom: 30px;
 }
 
 .product__title-label {
@@ -38,7 +39,7 @@
     content: "";
     display: table;
     clear: both;
-    background-image: url(./../../assets/img/divide.png);
+    background-image: url(./../../img/divide.png);
     width: 100%;
     height: 28px;
     background-repeat: no-repeat;
@@ -68,6 +69,7 @@
 
 .product__item:hover .product__img img {
     transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }
 
 .group__icon {
@@ -162,7 +164,12 @@
     color: var(--hover-color);
 }
 
-.product__price--vnd {
-    font-size: 1.2rem;
+.product__price--new {
+    font-size: 1.4rem;
     color: var(--hover-color);
 } 
+
+.product__price--old {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}

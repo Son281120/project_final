@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    
+    <link rel="icon" href="./assets/img/penguinFavicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/Home/home_header.css">
+    <link rel="stylesheet" href="./assets/css/Home/home_footer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="hidden-xs col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-0 col-lg-8 col-hg-9">
+                        <div class="header__top_left fw">
+                            <ul class="list__contact">
+                                <li class="contact__item">
+                                    Số 103 Yên Sở , Hoài Đức , Hà Nội
+                                </li>
+                                <li class="contact__item">
+                                    Hotline:
+                                    <a href="tel:0822696888">
+                                        <strong>0822696888</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-hg-3">
+                        <div class="panel_cart">
+                            <div class="top-cart-contain">
+                                <div class="mini-cart text-xs-center">
+                                    <div class="heading-cart" onclick="window.location.href='/cart'">
+                                        <span class="cartImg">
+                                            <img src="//bizweb.dktcdn.net/thumb/icon/100/347/064/themes/717243/assets/icon_cart___empty.png?1677949219365"
+                                                alt="icon-cart">
+                                        </span>
+                                        <span class="cartCount count_item_pr" id="cart-total">0</span>
+                                    </div>
+                                    <div class="top-cart-content hidden-sm hidden-xs">
+                                        <ul id="cart-sidebar" class="mini-products-list count_li">
+                                            <div class="no-item"></div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__top-right hidden-xs hidden-sm">
+                            <img src="//bizweb.dktcdn.net/thumb/icon/100/347/064/themes/717243/assets/icon_account.png?1677949317964"
+                                class="img-responsive" alt="Tài khoản">
+                            <ul class="cp">
+                                <li class="cp-item">
+                                    <a href="./index.html" title="Đăng nhập" class="btn-transition">
+                                        <span>Đăng nhập</span>
+                                    </a>
+                                </li>
+                                <li class="cp-item">
+                                    <a href="./index.html" title="Đăng ký" class="btn-transition">
+                                        <span>Đăng ký</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-3 col-md-offset-2 col-lg-2 col-lg-offset-0 col-hg-2 header__logo">
+                        <a href="./home.html" class="header__logo-link">
+                            <img src="./assets/img/PenguinLogo.png" alt="logo" class="header__logo-img">
+                            <span class="header__logo-text">PENGUIN</span>
+                            <span class="header__logo-text auth">AUTH</span>
+
+                        </a>
+                    </div>
+                    <nav class="col-xl-8 col-lg-8 col-md-12 col-sm-12 header__navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a href="" class="navbar__item-link">
+                                    THƯƠNG HIỆU
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="subnav">
+                                    <ul class="subnav__list">
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Adidas</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Nike</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Jordan</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Puma</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="" class="navbar__item-link">
+                                    NƯỚC HOA
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="subnav">
+                                    <ul class="subnav__list">
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Nước hoa nam</a>
+                                        </li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Nước hoa nữ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="" class="navbar__item-link">
+                                    QUẦN ÁO
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="subnav">
+                                    <ul class="subnav__list">
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Quần áo order</a>
+                                        </li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Quần áo có sẵn</a>
+                                        </li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Áo Champion</a>
+                                        </li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Áo MLB</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">KAWS X UNIQLO</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="" class="navbar__item-link">
+                                    PHỤ KIỆN
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="subnav">
+                                    <ul class="subnav__list">
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Ba lô</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Dép</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Túi</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Kính</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Mũ</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Tất</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="" class="navbar__item-link">
+                                    ƯU ĐÃI
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="subnav">
+                                    <ul class="subnav__list">
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Sale thương
+                                                hiệu</a></li>
+                                        <li class="subnav__item"><a href="" class="subnav__item_link">Sale 1111</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div
+                        class="col-xs-12 col-sm-12 col-md-5 col-md-offset-0 col-lg-2 col-lg-offset-10 col-hg-2 col-hg-offset-10 header__search">
+                        <form action="/search" method="get">
+                            <input type="text" class="form-control" autocomplete="off" maxlength="70" name="query"
+                                id="search" title="Nhập từ khoá cần tìm" placeholder="Tìm kiếm ..." required="">
+                            <button class="search-btn">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    <footer class="footer">
+        <div class="footer__top container-fluid">
+            <img src="https://bizweb.dktcdn.net/100/347/064/themes/717243/assets/section_privacy___image__1.png?1677949317964"
+                alt="">
+            <span class="footer__top-title">HỖ TRỢ VẬN CHUYỂN COD TOÀN QUỐC:</span>
+            <span class="footer__top-desc">trợ giá bảo hiểm cho mọi mặt hàng</span>
+
+        </div>
+        <div class="footer__main">
+            <div class="containner">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 footer__logo">
+                        <a href="" class="header__logo-link">
+                            <img src="./assets/img/PenguinLogo.png" alt="logo" class="footer__logo-img">
+                            <span class="footer__logo-text">PENGUIN</span>
+                            <span class="footer__logo-text auth">AUTH</span>
+                        </a>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                        <div class="footer__info">
+                            <h4 class="footer__title">
+                                <span>CỬA HÀNG CHUYÊN HÀNG CHÍNH HÃNG</span>
+                            </h4>
+                            <ul>
+                                <li>
+                                    Địa chỉ: Số 103 Yên Sở , Hoài Đức , Hà Nội
+                                </li>
+                                <li>
+                                    Hotline: <a href="tel:0822696888">0822696888</a>
+                                </li>
+                                <li>
+                                    Email: <a href="mailto:bi1508.97@gmail.com">bi1508.97@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer__item">
+                        <div class="footer__info">
+                            <h4 class="footer__title">
+                                <span>GIỚI THIỆU</span>
+                            </h4>
+                            <ul>
+                                <li class="f-item">
+                                    <a href="">Hướng dẫn mua hàng</a>
+                                </li>
+                                <li class="f-item">
+                                    <a href="">Điều khoản dịch vụ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer__item">
+                        <div class="footer__info">
+                            <h4 class="footer__title">
+                                <span>CHÍNH SÁCH</span>
+                            </h4>
+                            <ul>
+                                <li class="f-item">
+                                    <a href="">Chính sách đổi trả</a>
+                                </li>
+                                <li class="f-item">
+                                    <a href="">Quy định sử dụng</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer__item">
+                        <div class="footer__info">
+                            <h4 class="footer__title">
+                                <span>HỖ TRỢ</span>
+                            </h4>
+                            <ul>
+                                <li class="f-item">
+                                    <a href="./home.html">Tìm kiếm</a>
+                                </li>
+                                <li class="f-item">
+                                    <a href="./index.html">Đăng nhập</a>
+                                </li>
+                                <li class="f-item">
+                                    <a href="./index.html">Đăng ký</a>
+                                </li>
+                                <li class="f-item">
+                                    <a href="./cart.html">Giỏ hàng</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer__item">
+                        <div class="footer__info">
+                            <div class="social-media">
+                                <h4 class="footer__title">
+                                    <span>KẾT NỐI CHÚNG TÔI</span>
+                                </h4>
+                                <ul class="social-media-list">
+                                    <li class="social-media-item">
+                                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="social-media-item">
+                                        <a href=""><i class="fa-brands fa-google"></i></a>
+                                    </li>
+                                    <li class="social-media-item">
+                                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                    <li class="social-media-item">
+                                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li class="social-media-item social-media-item-boder"></li>
+                                </ul>
+                            </div>
+                            <div class="receive-infomation">
+                                <h4 class="footer__title">
+                                    <span>NHẬN TIN KHIẾN MẠI</span>
+                                </h4>
+                                <form action="">
+                                    <input type="email" placeholder="Email của bạn" class="email-contact">
+                                    <button class="email-btn">
+                                        <i class="fa-regular fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
